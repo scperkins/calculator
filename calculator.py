@@ -11,19 +11,21 @@ def options():
 	#return input("Choose your operator: " )
 
 #swag
+#now not so much. #yolo anyway
 def add(x):
 	return "The sum is: ",sum(x)
 	
-def divide(x,y):
-	return x/y
-#def multiply(i, j):
-	#return i *j
+def divide(x):
+	return x[0]/x[1]
+
+def mult(i):
+	return i *j
 
 def main():
 	options()
 	selec = 0
 	while True:
-		selec = int(raw_input("Select the corresponding number for operator: "))
+		selec = int(raw_input("Select the corresponding number for operation: "))
 		if selec == 1: 
 			prompt = raw_input("Enter a sequence of numbers SEPARATED BY SPACES to add: ").split()
 			print prompt
@@ -34,9 +36,21 @@ def main():
 			print add(nums)
 
 		elif selec == 2:
-			prompt = input("Select two numbers to subtract from one another: ")
-			print prompt
-			
+			prompt = raw_input("Select two numbers to subtract from one another: ").split()
+			nums = []
+			for x in prompt:
+				nums.append(int(x))
+			print divide(nums)
+			#print divide(prompt)
+
+		elif selec == 3:
+			prompt = raw_input("Enter a sequence of numnbers, SEPARATED BY SPACES you wish to multiply: ")
+			nums = []
+			for x in prompt:
+				nums.append(int(x))
+			print mult(nums)
+
+
 
 
 main()
