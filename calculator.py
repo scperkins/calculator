@@ -19,7 +19,7 @@ def divide(x):
 	return x[0]/x[1]
 
 def mult(i):
-	return i *j
+	return i[0]*i[1]
 
 def main():
 	options()
@@ -31,23 +31,23 @@ def main():
 			print prompt
 			nums = []
 			for x in prompt:
-				nums.append(int(x))
+				nums.append(float(x))
 			#print nums
 			print add(nums)
 
-		elif selec == 2:
-			prompt = raw_input("Select two numbers to subtract from one another: ").split()
+		elif selec == 4:
+			prompt = raw_input("Select two numbers to divide from one another: ").split()
 			nums = []
 			for x in prompt:
-				nums.append(int(x))
+				nums.append(float(x))
 			print divide(nums)
 			#print divide(prompt)
 
 		elif selec == 3:
-			prompt = raw_input("Enter a sequence of numnbers, SEPARATED BY SPACES you wish to multiply: ")
+			prompt = raw_input("Enter a sequence of numnbers, SEPARATED BY SPACES you wish to multiply: ").split()
 			nums = []
 			for x in prompt:
-				nums.append(int(x))
+				nums.append(float(x))
 			print mult(nums)
 
 
